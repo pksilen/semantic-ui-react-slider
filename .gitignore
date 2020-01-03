@@ -1,0 +1,7 @@
+.idea
+*.iml
+coverage
+node_modules
+lib
+flow-typed
+TODO.txt
