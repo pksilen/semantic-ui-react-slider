@@ -1,5 +1,6 @@
 # semantic-ui-react-slider
 Slider control for [Semantic UI React]
+
 Based on [React Compound Slider]
 
 [![version][version-badge]][package]
