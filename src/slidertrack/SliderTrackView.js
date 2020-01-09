@@ -20,7 +20,7 @@ const SliderTrackView = ({
     style={{
       left: `${sourceHandle.percent}%`,
       width: `${targetHandle.percent - sourceHandle.percent}%`,
-      backgroundColor: 'blue',
+      backgroundColor: '#2185d0',
       borderRadius: 5,
       cursor: 'pointer',
       height: '10px',

@@ -29,6 +29,15 @@ const DemoApp = (): Element<any> => {
         Selected max value:
         {maxSelectedValue}
       </span>
+      <br />
+      <br />
+      <SliderView
+        onSliderValuesChange={onSliderValuesChange}
+        selectedMinValue={minSelectedValue}
+        selectedMaxValue={maxSelectedValue}
+        sliderMinValue={0}
+        sliderMaxValue={100}
+      />
     </div>
   );
 };

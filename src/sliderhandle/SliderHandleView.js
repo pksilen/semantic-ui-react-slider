@@ -14,7 +14,7 @@ const SliderHandleView = ({ handle: { id, value, percent }, getHandleProps }: Pr
   <div
     style={{
       left: `${percent}%`,
-      backgroundColor: 'blue',
+      backgroundColor: '#2185d0',
       borderRadius: '50%',
       color: '#333',
       cursor: 'pointer',
@@ -30,8 +30,8 @@ const SliderHandleView = ({ handle: { id, value, percent }, getHandleProps }: Pr
   >
     <div
       style={{
-        fontSize: '10px',
-        marginTop: '-12px'
+        fontSize: '14px',
+        marginTop: '-20px'
       }}
     >
       {value}
