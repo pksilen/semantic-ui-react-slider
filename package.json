@@ -1,6 +1,6 @@
 {
   "name": "semantic-ui-react-slider",
-  "version": "1.3.5",
+  "version": "1.0.0",
   "description": "Slider control for Semantic UI React",
   "keywords": [
     "React",
@@ -15,7 +15,7 @@
   "scripts": {
     "build": "babel ./src --out-dir ./lib --source-maps --ignore \"src/**/*.test.js\",\"src/setupTests.js\"",
     "build-demo": "prettier --check demo/demo.js && flow demo/demo.js && eslint demo/demo.js && webpack",
-    "flow": "flow src",
+    "flow": "flow ./src",
     "stop-flow": "flow stop",
     "install-flow-types": "flow-typed install",
     "lint": "eslint ./src",
@@ -39,6 +39,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
