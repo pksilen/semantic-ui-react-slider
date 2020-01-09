@@ -3,6 +3,7 @@
 
 import React from 'react';
 import type { Element } from 'react';
+// $FlowFixMe
 import type { SliderHandle } from './SliderHandle';
 
 type Props = $Exact<{

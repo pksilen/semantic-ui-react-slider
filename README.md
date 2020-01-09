@@ -1,5 +1,6 @@
 # semantic-ui-react-slider
 Slider control for [Semantic UI React]
+Based on [React Compound Slider]
 
 [![version][version-badge]][package]
 [![build][build]][circleci]
@@ -57,3 +58,4 @@ MIT License
 [circleci]: https://circleci.com/gh/pksilen/semantic-ui-react-slider/tree/master
 [demo]: https://pksilen.github.io/semantic-ui-react-slider/
 [Semantic UI React]: https://react.semantic-ui.com/
+[React Compound Slider]: https://github.com/sghall/react-compound-slider

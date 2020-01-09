@@ -3,10 +3,15 @@
 
 import React, { useCallback } from 'react';
 import type { Element } from 'react';
+// $FlowFixMe
 import PropTypes from 'prop-types';
+// $FlowFixMe
 import { Slider as ReactCompoundSlider, Handles, Rail, Tracks } from 'react-compound-slider';
+// $FlowFixMe
 import SliderHandleView from '../sliderhandle/SliderHandleView';
+// $FlowFixMe
 import SliderTrackView from '../slidertrack/SliderTrackView';
+// $FlowFixMe
 import type { SliderHandle } from '../sliderhandle/SliderHandle';
 
 type SliderProps = $Exact<{

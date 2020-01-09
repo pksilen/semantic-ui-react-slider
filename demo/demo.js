@@ -3,6 +3,7 @@
 import React, { useCallback, useState } from 'react';
 import type { Element } from 'react';
 import { render } from 'react-dom';
+// $FlowFixMe
 import SliderView from '../src/slider/SliderView';
 
 const DemoApp = (): Element<any> => {
@@ -21,12 +22,12 @@ const DemoApp = (): Element<any> => {
       <br />
       <br />
       <span>
-        Selected min value:
+        Selected min value:&nbsp;
         {minSelectedValue}
       </span>
       <br />
       <span>
-        Selected max value:
+        Selected max value:&nbsp;
         {maxSelectedValue}
       </span>
       <br />
