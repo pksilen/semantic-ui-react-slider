@@ -8,7 +8,7 @@
     "Slider",
     "Control"
   ],
-  "main": "lib/Slider.js",
+  "main": "lib/slider/SliderView.js",
   "files": [
     "lib"
   ],

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render should render SliderView correctly 1`] = `
+<Slider
+  className=""
+  component="div"
+  disabled={false}
+  domain={
+    Array [
+      0,
+      0,
+    ]
+  }
+  flatten={false}
+  mode={2}
+  onChange={[Function]}
+  onSlideEnd={[Function]}
+  onSlideStart={[Function]}
+  onUpdate={[Function]}
+  reversed={false}
+  rootProps={Object {}}
+  rootStyle={
+    Object {
+      "flexBasis": "calc(100% - 20px)",
+      "height": "45px",
+      "marginLeft": "10px",
+      "marginRight": "10px",
+      "position": "relative",
+    }
+  }
+  step={1}
+  values={
+    Array [
+      0,
+      0,
+    ]
+  }
+  vertical={false}
+  warnOnChanges={false}
+>
+  <Rail>
+    <Component />
+  </Rail>
+  <Handles>
+    <Component />
+  </Handles>
+  <Tracks
+    left={false}
+    right={false}
+  >
+    <Component />
+  </Tracks>
+</Slider>
+`;
