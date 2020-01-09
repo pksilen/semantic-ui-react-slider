@@ -40,11 +40,12 @@ Slider control for [Semantic UI React]
     onSliderValuesChange: (minValue: number, maxValue: number) => void,
          
 ## Optional properties
-| property             | type     | description                              |
-| ---------------------|-----------------------------------------------------|
-| className            | string   | className for root div                   |    
-| selectedMinValue     | number   | Selected minimum value                   |
-| selectedMaxValue     | number   | Selected max value                       |
+
+    | property             | type     | description                              |
+    | ---------------------|-----------------------------------------------------|
+    | className            | string   | className for root div                   |    
+    | selectedMinValue     | number   | Selected minimum value                   |
+    | selectedMaxValue     | number   | Selected max value                       |
 
     
 ## License
