@@ -16,7 +16,7 @@ const DemoApp = (): Element<any> => {
   }, []);
 
   return (
-    <div style={{ marginLeft: '5px' }}>
+    <div style={{ marginLeft: '5px', width: '50%' }}>
       <h1>Slider Demo</h1>
       <SliderView onSliderValuesChange={onSliderValuesChange} sliderMinValue={0} sliderMaxValue={100} />
       <br />
