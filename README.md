@@ -1,7 +1,5 @@
-# semantic-ui-react-numberinput
+# semantic-ui-react-slider
 Slider control for [Semantic UI React]
-
-## Under construction !!
 
 [![version][version-badge]][package]
 [![build][build]][circleci]
