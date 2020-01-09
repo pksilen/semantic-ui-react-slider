@@ -18,7 +18,7 @@ Slider control for [Semantic UI React]
     
 ## Example usage
     import React, { useCallback, useState } from 'react';
-    import NumberInput from 'slider';
+    import SliderView from 'semantic-ui-react-slider';
     
     const SliderExample = () => {
         const [minSelectedValue, setMinSelectedValue] = useState(0);
