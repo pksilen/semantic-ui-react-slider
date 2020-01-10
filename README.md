@@ -46,6 +46,10 @@ Based on [React Compound Slider]
     | className            | string   | className for root div                   |    
     | selectedMinValue     | number   | Selected minimum value                   |
     | selectedMaxValue     | number   | Selected max value                       |
+    | sliderStyle          | Object   | Style for slider                         |
+    | sliderRailStyle      | Object   | Style for slider rail                    |
+    | sliderTrackStyle     | Object   | Style for slider track                   |
+    | sliderHandleStyle    | Object   | Style for slider handle                  |
 
     
 ## License

@@ -8,10 +8,11 @@ import type { SliderHandle } from './SliderHandle';
 
 type Props = $Exact<{
   handle: SliderHandle,
-  getHandleProps: any
+  getHandleProps: any,
+  style: ?Object
 }>;
 
-const SliderHandleView = ({ handle: { id, value, percent }, getHandleProps }: Props): Element<any> => (
+const SliderHandleView = ({ handle: { id, value, percent }, getHandleProps, style }: Props): Element<any> => (
   <div
     style={{
       left: `${percent}%`,
@@ -25,7 +26,8 @@ const SliderHandleView = ({ handle: { id, value, percent }, getHandleProps }: Pr
       position: 'absolute',
       textAlign: 'center',
       width: '20px',
-      zIndex: 2
+      zIndex: 2,
+      ...style
     }}
     {...getHandleProps(id)}
   >

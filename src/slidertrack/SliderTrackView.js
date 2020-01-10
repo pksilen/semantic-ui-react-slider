@@ -9,13 +9,15 @@ import type { SliderHandle } from '../sliderhandle/SliderHandle';
 type Props = $Exact<{
   sourceHandle: SliderHandle,
   targetHandle: SliderHandle,
-  getTrackProps: any
+  getTrackProps: any,
+  style: ?Object
 }>;
 
 const SliderTrackView = ({
   sourceHandle,
   targetHandle,
-  getTrackProps
+  getTrackProps,
+  style
 }: Props): Element<any> => ( // NOSONAR
   <div
     style={{
@@ -27,7 +29,8 @@ const SliderTrackView = ({
       height: '10px',
       marginTop: '18px',
       position: 'absolute',
-      zIndex: 1
+      zIndex: 1,
+      ...style
     }}
     {...getTrackProps()}
   />

@@ -20,7 +20,11 @@ type SliderProps = $Exact<{
   selectedMaxValue?: ?number,
   selectedMinValue?: ?number,
   sliderMaxValue: number,
-  sliderMinValue: number
+  sliderMinValue: number,
+  sliderStyle?: ?Object,
+  sliderRailStyle?: ?Object,
+  sliderTrackStyle?: ?Object,
+  sliderHandleStyle?: ?Object
 }>;
 
 const SliderView = ({
@@ -29,7 +33,11 @@ const SliderView = ({
   selectedMaxValue,
   selectedMinValue,
   sliderMaxValue,
-  sliderMinValue
+  sliderMinValue,
+  sliderStyle,
+  sliderRailStyle,
+  sliderTrackStyle,
+  sliderHandleStyle
 }: SliderProps): Element<any> => {
   const handleSliderUpdate = useCallback((values: number[]) => {
     if (values.length === 2) {
@@ -37,39 +45,46 @@ const SliderView = ({
     }
   }, []);
 
-  const sliderStyle = {
+  const finalSliderStyle = {
     position: 'relative',
     height: '45px',
     marginLeft: '10px',
     marginRight: '10px',
-    flexBasis: 'calc(100% - 20px)'
+    flexBasis: 'calc(100% - 20px)',
+    ...sliderStyle
   };
 
-  const sliderRailStyle = {
+  const finalSliderRailStyle = {
     backgroundColor: 'rgb(150, 150, 150)',
     borderRadius: '5px',
     height: '10px',
     marginTop: '18px',
     position: 'absolute',
-    width: '100%'
+    width: '100%',
+    ...sliderRailStyle
   };
 
   return (
     <ReactCompoundSlider
       className={className}
-      rootStyle={sliderStyle}
+      rootStyle={finalSliderStyle}
       domain={[sliderMinValue, sliderMaxValue]}
       step={1}
       mode={2}
       values={[selectedMinValue ?? sliderMinValue, selectedMaxValue ?? sliderMaxValue]}
       onUpdate={handleSliderUpdate}
     >
-      <Rail>{({ getRailProps }: any) => <div style={sliderRailStyle} {...getRailProps()} />}</Rail>
+      <Rail>{({ getRailProps }: any) => <div style={finalSliderRailStyle} {...getRailProps()} />}</Rail>
       <Handles>
         {({ handles, getHandleProps }: any): Element<any> => (
           <div className="slider-handles">
             {handles.map((handle: SliderHandle) => (
-              <SliderHandleView key={handle.id} handle={handle} getHandleProps={getHandleProps} />
+              <SliderHandleView
+                key={handle.id}
+                handle={handle}
+                getHandleProps={getHandleProps}
+                style={sliderHandleStyle}
+              />
             ))}
           </div>
         )}
@@ -83,6 +98,7 @@ const SliderView = ({
                 sourceHandle={source}
                 targetHandle={target}
                 getTrackProps={getTrackProps}
+                style={sliderTrackStyle}
               />
             ))}
           </div>
@@ -98,13 +114,21 @@ SliderView.propTypes = {
   selectedMaxValue: PropTypes.number,
   selectedMinValue: PropTypes.number,
   sliderMaxValue: PropTypes.number.isRequired,
-  sliderMinValue: PropTypes.number.isRequired
+  sliderMinValue: PropTypes.number.isRequired,
+  sliderStyle: PropTypes.string,
+  sliderRailStyle: PropTypes.string,
+  sliderTrackStyle: PropTypes.string,
+  sliderHandleStyle: PropTypes.string
 };
 
 SliderView.defaultProps = {
   className: '',
   selectedMinValue: null,
-  selectedMaxValue: null
+  selectedMaxValue: null,
+  sliderStyle: null,
+  sliderRailStyle: null,
+  sliderTrackStyle: null,
+  sliderHandleStyle: null
 };
 
 export default SliderView;
